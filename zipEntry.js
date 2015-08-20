@@ -245,6 +245,9 @@ module.exports = function (/*Buffer*/input) {
             decompress(true, callback, pass)
         },
 
+        getRawData : function() {
+            return getCompressedDataFromZip();
+        }
         set attr(attr) { _entryHeader.attr = attr; },
         get attr() { return _entryHeader.attr; },
 
